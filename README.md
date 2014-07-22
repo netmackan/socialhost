@@ -9,6 +9,7 @@ Social/communication small server/VPS set up with blog/micro-blog/chat/voip etc 
 TODO: How to build the Docker images
 
 
+$ sudo mkdir /opt/db-data
 
 
 ## Running

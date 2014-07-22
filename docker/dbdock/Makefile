@@ -5,7 +5,7 @@ DOCKER_USER=netmackan
 NAME:=mariadb
 USER:=super
 PASS:=$(shell pwgen -s -1 16)
-DATA_DIR:=/tmp/mariadb
+DATA_DIR:=/opt/db-data
 PORT:=127.0.0.1:3306
 
 RUNNING:=$(shell docker ps | grep $(NAME) | cut -f 1 -d ' ')
