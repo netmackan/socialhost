@@ -1,3 +1,5 @@
+
 #!/bin/bash
 
-sudo docker run -d -v /tmp/prosody:/var/lib/prosody -e "DBSCHEMA=prosody" -e "DBUSER=prosody" -e "DBPASS=nuIlocuj3-Cawvaynet8" --link mariadb:db -p 0.0.0.0:5222:5222 imdock
+sudo mkdir -p /opt/prosody-logs
+sudo docker run -d -v /opt/prosody-logs:/var/log/prosody -e "DBSCHEMA=prosody" -e "DBUSER=prosody" -e "DBPASS=nuIlocuj3-Cawvaynet8" --link mariadb:db -p 0.0.0.0:5222:5222 imdock

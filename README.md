@@ -9,6 +9,9 @@ Social/communication small server/VPS set up with blog/micro-blog/chat/voip etc 
 TODO: How to build the Docker images
 
 
+$ cd docker/imdock
+$ sudo docker build -t imdock .
+
 $ sudo mkdir /opt/db-data
 
 

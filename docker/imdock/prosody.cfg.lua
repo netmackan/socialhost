@@ -141,18 +141,14 @@ sql = { driver = "MySQL", database = os.getenv("DBSCHEMA"), username = os.getenv
 -- Logging configuration
 -- For advanced logging see http://prosody.im/doc/logging
 --
--- Debian:
---  Logs info and higher to /var/log
---  Logs errors to syslog also
--- log = {
---       -- Log files (change 'info' to 'debug' for debug logs):
---        info = "/var/log/prosody/prosody.log";
-  --      error = "/var/log/prosody/prosody.err";
-    --    -- Syslog:
-   --     { levels = { "error" }; to = "syslog";  };
---}
+log = {
+          -- Log all error messages to prosody.err
+          { levels = { min = "error" }, to = "file", filename = "/var/log/prosody/prosody.err" };
+          -- Log everything of level "info" and higher (that is, all except "debug" messages)
+          -- to prosody.log
+          { levels = { min =  "info" }, to = "file", filename = "/var/log/prosody/prosody.log" };
+         }
 
-log = "*console"
 
 ----------- Virtual hosts -----------
 -- You need to add a VirtualHost entry for each domain you wish Prosody to serve.
