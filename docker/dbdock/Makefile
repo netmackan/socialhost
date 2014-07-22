@@ -6,7 +6,7 @@ NAME:=mariadb
 USER:=super
 PASS:=$(shell pwgen -s -1 16)
 DATA_DIR:=/tmp/mariadb
-PORT:=127.0.0.1:13306
+PORT:=127.0.0.1:3306
 
 RUNNING:=$(shell docker ps | grep $(NAME) | cut -f 1 -d ' ')
 ALL:=$(shell docker ps -a | grep $(NAME) | cut -f 1 -d ' ')
