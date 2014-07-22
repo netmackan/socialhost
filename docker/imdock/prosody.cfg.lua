@@ -110,7 +110,7 @@ ssl = {
 -- domains.
 
 c2s_require_encryption = true
--- s2s_require_encryption = true
+s2s_require_encryption = true
 
 -- s2s_secure_auth = true
 -- s2s_insecure_domains = { "gmail.com" }
