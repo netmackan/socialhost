@@ -15,6 +15,11 @@ $ sudo docker build -t imdock .
 $ sudo mkdir /opt/db-data
 
 
+## Configuring
+
+TODO: Remember to setup DNS SRV records for the XMPP service.
+
+
 ## Running
 
 Start MariaDB
