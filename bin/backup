@@ -1,0 +1,12 @@
+#!/bin/bash
+
+DATE=`date +"%F_%H%M"`
+
+# Backup repo + private folders (TODO: We just want the private folder)S
+cd ~/
+tar -czvf ~/socialhost-repo+private-${DATE}.tar.gz socialhost/*
+
+
+# Backup the data folders (TODO: Use a sub folder instead of /opt)
+cd /opt
+sudo tar -czvf ~/socialhost-data-${DATE}.tar.gz *
