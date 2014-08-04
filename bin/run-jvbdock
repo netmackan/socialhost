@@ -1,0 +1,8 @@
+
+#!/bin/bash
+
+# TODO: Move out passwords to a config file
+
+sudo mkdir -p /opt/jvb-logs
+#sudo docker run -d -v /opt/jvb-logs:/var/log/jvb -e "JVBPASS=vecdyefAt9Omsyofleong0" -e "XMPPHOST=" -e "XMPPDOMAIN=kilas.se" --link imdock:xmpp jvbdock
+sudo docker run -d -v /opt/jvb-logs:/var/log/jvb -e "JVBPASS=vecdyefAt9Omsyofleong0" -e "XMPPHOST=172.17.0.248" -e "XMPPDOMAIN=kilas.se" jvbdock

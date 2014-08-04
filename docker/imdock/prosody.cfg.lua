@@ -149,6 +149,8 @@ log = {
           { levels = { min =  "info" }, to = "file", filename = "/var/log/prosody/prosody.log" };
          }
 
+component_ports = { 5347 }
+component_interface = "0.0.0.0"
 
 ----------- Virtual hosts -----------
 -- You need to add a VirtualHost entry for each domain you wish Prosody to serve.

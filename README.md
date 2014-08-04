@@ -16,11 +16,25 @@ $ sudo mkdir /opt/db-data
 
 ### Prosody (XMPP)
 ```
-$ cd ~socialhost/docker/imdock
+$ cd ~/socialhost/docker/imdock
 $ sudo docker build -t imdock .
 ```
 TODO: Remember to setup DNS SRV records for the XMPP service.
 TODO: Create prosody database
+
+### Jitsi Videobridge (SFU)
+```
+$ cd ~/socialhost/docker/jvbdock
+$ sudo docker build -t jvbdock .
+```
+TODO: Currently one need to update bin/run-jvbdock manually with the XMPPHOST by:
+```
+$ sudo docker ps
+```
+Find the ID of imdock and the run:
+```
+$ bin/getip ID 
+```
 
 
 ### Apache HTTP Server
@@ -39,10 +53,19 @@ Start MariaDB
 $ bin/run-dbdock
 ```
 
+
 Start Prosody
 ```
 $ bin/run-imdock
 ```
+
+
+Start Jitsi Videobridge
+```
+$ bin/run-jvbdock
+```
+TODO: Note: need to update with IP of XMPPHOST (imdock)
+
 
 Start Apache HTTP Server
 ```
