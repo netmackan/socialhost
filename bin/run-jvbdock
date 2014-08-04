@@ -5,4 +5,5 @@
 
 sudo mkdir -p /opt/jvb-logs
 #sudo docker run -d -v /opt/jvb-logs:/var/log/jvb -e "JVBPASS=vecdyefAt9Omsyofleong0" -e "XMPPHOST=" -e "XMPPDOMAIN=kilas.se" --link imdock:xmpp jvbdock
-sudo docker run -d -v /opt/jvb-logs:/var/log/jvb -e "JVBPASS=vecdyefAt9Omsyofleong0" -e "XMPPHOST=172.17.0.248" -e "XMPPDOMAIN=kilas.se" jvbdock
+sudo docker run -d -v /opt/jvb-logs:/var/log/jvb -e "JVBPASS=vecdyefAt9Omsyofleong0" -e "XMPPHOST=172.17.0.248" -e "PUBLICIP=5.101.98.55" -e "XMPPDOMAIN=kilas.se" -p 0.0.0.0:10000:10000/udp -p 0.0.0.0:10001:10001/udp -p 0.0.0.0:10002:10002/udp -p 0.0.0.0:10003:10003/udp -p 0.0.0.0:10004:10004/udp -p 0.0.0.0:10005:10005/udp -p 0.0.0.0:10006:10006/udp -p 0.0.0.0:10007:10007/udp -p 0.0.0.0:10008:10008/udp jvbdock
+
