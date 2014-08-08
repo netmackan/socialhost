@@ -1,0 +1,9 @@
+
+#!/bin/bash
+
+sudo mkdir -p /opt/meet-root
+sudo mkdir -p /opt/meet-sites
+sudo mkdir -p /opt/meet-logs
+
+sudo docker run -d -v /opt/meet-root:/srv/meet -v /opt/meet-sites:/etc/nginx/sites-enabled -v /opt/meet-logs:/var/log/nginx -p 0.0.0.0:8081:8081 meetdock
+
