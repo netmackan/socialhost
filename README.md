@@ -45,6 +45,17 @@ $ sudo docker build -t webdock .
 TODO: Configure vhosts in /opt/apache-sites
 TODO: Put TLS certificates in /opt/apache-private
 
+Generate a new key-pair and a PKCS#10 certificate signing request:
+```
+$ openssl req -new -newkey rsa:2048 -nodes -keyout www.example.com-001.key -out www.example.com-001.csr -subj "/CN=www.example.com/C=SE"
+$ openssl req -text -noout -in www.example.com-001.csr
+```
+
+Send the www.example.com.csr to the Certification Authority (CA) to obtain your certificate. Also make sure to gather any intermediate CA certificates between your certificate and the root certificate.
+```
+$ mv www.example.com-001.key /opt/apache-private/
+$ chown TODO chmod
+$ cp www.example.com-001.crt /opt/apache-private/
 
 ## Running
 
