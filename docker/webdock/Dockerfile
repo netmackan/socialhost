@@ -1,6 +1,6 @@
 # Apache HTTP Server
 
-FROM netmackan/baseimage:0.9.11
+FROM socialhost/basedock:0.9.11
 MAINTAINER Markus <markus@markuspage.com>
 ENV DEBIAN_FRONTEND noninteractive
 ENV LANG C.UTF-8

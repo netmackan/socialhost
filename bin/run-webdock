@@ -1,9 +1,11 @@
 
 #!/bin/bash
 
-sudo mkdir -p /opt/apache-logs
-sudo mkdir -p /opt/apache-www
-sudo mkdir -p /opt/apache-sites
-sudo mkdir -p /opt/apache-certs
-sudo docker run -d -v /opt/apache-logs:/var/log/apache2 -v /opt/apache-www:/var/www -v /opt/apache-sites:/etc/apache2/sites-enabled -v /opt/apache-private:/etc/apache2/private -e "DBSCHEMA=apache" -e "DBUSER=apache" -e "DBPASS=nuIlocuj3-Cawvaynet8" --link mariadb:db -p 0.0.0.0:80:80 -p 0.0.0.0:443:443 webdock
+mkdir -p ~/apache-logs && 
+mkdir -p ~/apache-www &&
+mkdir -p ~/apache-sites &&
+mkdir -p ~/apache-certs &&
+docker run -d -v ~/apache-logs:/var/log/apache2 -v ~/apache-www:/var/www -v ~/apache-sites:/etc/apache2/sites-enabled -v ~/apache-private:/etc/apache2/private -p 0.0.0.0:80:80 -p 0.0.0.0:443:443 webdock
 
+# Disabling database for now
+#docker run -d -v /opt/apache-logs:/var/log/apache2 -v /opt/apache-www:/var/www -v /opt/apache-sites:/etc/apache2/sites-enabled -v /opt/apache-private:/etc/apache2/private -e "DBSCHEMA=apache" -e "DBUSER=apache" -e "DBPASS=nuIlocuj3-Cawvaynet8" --link mariadb:db -p 0.0.0.0:80:80 -p 0.0.0.0:443:443 webdock

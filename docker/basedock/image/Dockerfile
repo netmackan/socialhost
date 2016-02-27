@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM socialhost/ubuntu:14.04
 MAINTAINER Markus <markus@markuspage.com>
 
 ENV HOME /root
